@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.home.WalletFragment">
+
+    <include
+        android:id="@+id/wallet_toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/wallet_hotseat_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wallet_hotseat_height"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/wallet_toolbar">
+
+        <TextView
+            android:id="@+id/wallet_qr_code_scanner_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:drawableTop="@drawable/ic_wallet_hotseat_qr_code_scanner_24dp"
+            android:drawablePadding="@dimen/wallet_hotseat_vertical_spacing"
+            android:gravity="center"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:text="@string/wallet_hotseat_qr_code_scanner"
+            android:textColor="@color/colorText" />
+
+        <TextView
+            android:id="@+id/wallet_qr_code_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:drawableTop="@drawable/ic_wallet_hotseat_qr_code_24dp"
+            android:drawablePadding="@dimen/wallet_hotseat_vertical_spacing"
+            android:gravity="center"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:text="@string/wallet_hotseat_receive_money"
+            android:textColor="@color/colorText" />
+
+        <TextView
+            android:id="@+id/wallet_transfer_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:drawableTop="@drawable/ic_wallet_hotseat_transfer_24dp"
+            android:drawablePadding="@dimen/wallet_hotseat_vertical_spacing"
+            android:gravity="center"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:text="@string/wallet_hotseat_transfer"
+            android:textColor="@color/colorText" />
+
+        <TextView
+            android:id="@+id/wallet_history_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:drawableTop="@drawable/ic_wallet_hotseat_history_24dp"
+            android:drawablePadding="@dimen/wallet_hotseat_vertical_spacing"
+            android:gravity="center"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:text="@string/wallet_hotseat_history_transaction"
+            android:textColor="@color/colorText" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/wallet_account_balance_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wallet_account_balance_height"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:background="@drawable/shape_wallet_account_balance_bg"
+        android:elevation="2dp"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/wallet_hotseat_ll"
+        app:layout_constraintTop_toBottomOf="@id/wallet_hotseat_ll">
+
+        <TextView
+            android:id="@+id/wallet_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/app_name"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/wallet_address_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wallet_name_tv"
+            android:layout_alignStart="@id/wallet_name_tv"
+            android:background="?android:selectableItemBackground"
+            android:drawableEnd="@drawable/ic_wallet_content_copy_16dp"
+            android:drawablePadding="4dp"
+            android:ellipsize="middle"
+            android:maxEms="10"
+            android:paddingStart="0dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="3dp"
+            android:paddingBottom="3dp"
+            android:singleLine="true"
+            android:text="@string/data_simple_address"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/wallet_money_balance_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="0"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/wallet_money_symbol_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/wallet_money_balance_tv"
+            android:layout_marginEnd="3dp"
+            android:layout_toStartOf="@id/wallet_money_balance_tv"
+            android:text="@string/money_symbol"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/wallet_assets_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="@string/wallet_assets"
+        android:textColor="@color/colorPrimaryText"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wallet_account_balance_rl" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/wallet_refresh_srl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wallet_assets_tv">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/wallet_assets_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_wallet_assets" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

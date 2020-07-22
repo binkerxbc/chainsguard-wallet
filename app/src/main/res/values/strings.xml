@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">CGWallet</string>
+
+    <!-- 引导界面-->
+    <string name="splash_create_wallet">Create a wallet</string>
+    <string name="splash_create_wallet_hint">First use of wallet</string>
+    <string name="splash_import_wallet">Import a wallet</string>
+    <string name="splash_import_wallet_hint">Already have a wallet</string>
+    <string name="splash_btn_skip">Skip and try</string>
+
+    <!-- universal text -->
+    <string name="wallet">wallet</string>
+    <string name="settings">settings</string>
+    <string name="money_symbol">$</string>
+
+    <!-- wallet fragment -->
+    <string name="wallet_hotseat_qr_code_scanner">Scan QR</string>
+    <string name="wallet_hotseat_receive_money">Receive</string>
+    <string name="wallet_hotseat_transfer">Transfer</string>
+    <string name="wallet_hotseat_history_transaction">History</string>
+    <string name="wallet_assets">Assets</string>
+
+    <!-- fake data -->
+    <string name="data_simple_address" translatable="false">0x0000000000000000000000000000000000000000</string>
+</resources>

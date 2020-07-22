@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="6dp"
+    app:cardUseCompatPadding="true"
+    tools:showIn="@layout/activity_license">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/item_license_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            app:srcCompat="@drawable/ic_license_link_24dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_license_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/item_license_link"
+            android:layout_marginStart="6dp"
+            android:layout_toEndOf="@id/item_license_link"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="16sp"
+            tools:text="标题" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/item_license_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_license_link"
+            android:layout_alignStart="@id/item_license_link"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="14sp"
+            tools:text="描述" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

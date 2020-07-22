@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="wallet_hotseat_height">164dp</dimen>
+    <dimen name="wallet_hotseat_vertical_spacing">8dp</dimen>
+    <dimen name="wallet_account_balance_height">140dp</dimen>
+</resources>

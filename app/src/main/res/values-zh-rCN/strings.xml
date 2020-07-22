@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">链安 Wallet</string>
+
+    <!-- 引导界面-->
+    <string name="splash_create_wallet">创建钱包</string>
+    <string name="splash_create_wallet_hint">第一次使用钱包</string>
+    <string name="splash_import_wallet">导入钱包</string>
+    <string name="splash_import_wallet_hint">已拥有钱包</string>
+    <string name="splash_btn_skip">跳过并直接试用</string>
+
+    <!-- universal text -->
+    <string name="wallet">钱包</string>
+    <string name="settings">设置</string>
+    <string name="money_symbol">￥</string>
+
+    <!-- wallet fragment -->
+    <string name="wallet_hotseat_qr_code_scanner">扫一扫</string>
+    <string name="wallet_hotseat_receive_money">收款</string>
+    <string name="wallet_hotseat_transfer">转账</string>
+    <string name="wallet_hotseat_history_transaction">历史交易</string>
+    <string name="wallet_assets">资产</string>
+</resources>

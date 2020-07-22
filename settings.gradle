@@ -1,0 +1,4 @@
+rootProject.name='chainsguard-wallet'
+include ':app'
+include ':okchain'
+include ':zxing-lib'
