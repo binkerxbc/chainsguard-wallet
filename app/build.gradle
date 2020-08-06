@@ -14,10 +14,20 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        release {
+            storeFile file('wallet')
+            storePassword "************"
+            keyAlias "wallet"
+            keyPassword "************"
+        }
+    }
+
     buildTypes {
         debug {
             minifyEnabled false
             buildConfigField 'String', 'RPC_URL', '"http://172.30.143.27:26657"'
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
 
@@ -26,6 +36,7 @@ android {
             shrinkResources true
             zipAlignEnabled true
             buildConfigField 'String', 'RPC_URL', '"http://3.13.150.20:36657"'
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
